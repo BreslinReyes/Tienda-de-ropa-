@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulario de Registro</title>
+<link rel="stylesheet" href="">
+<style>
+    
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .container {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 400px;
+        position: absolute;
+        left: 540px;
+        top: 70px;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+    .form-group {
+        margin-bottom: 20px;
+    }
+    .form-group label {
+        font-weight: bold;
+    }
+    .form-group input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    .form-group input[type="submit"] {
+        background-color: rgb(253, 253, 253);
+        color: #fff;
+        cursor: pointer;
+    }
+    .form-group input[type="submit"]:hover {
+        background-color: rgb(254, 252, 255);
+    }
+    .error-message {
+        color: red;
+        font-size: 12px;
+        margin-top: 5px;
+    }
+    .foto{
+        background-image: url('img/forma3.png');
+        background-size:cover;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;  
+    }
+    
+</style>
+</head>
+<body>
+<section class="foto">
+<div class="container">
+    <form id="registro-form">
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div class="form-group">
+            <label for="cedula">Cédula:</label>
+            <input type="text" id="cedula" name="cedula" maxlength="11" required>
+            <div class="error-message" id="cedula-error"></div>
+        </div>
+        <div class="form-group">
+            <label for="gmail">Gmail:</label>
+            <input type="email" id="gmail" name="gmail" required>
+        </div>
+        <div class="form-group">
+            <label for="contraseña">Contraseña:</label>
+            <input type="password" id="contraseña" name="contraseña" required>
+        </div>
+        <div class="form-group">
+            <label for="confirmar-contraseña">Confirmar Contraseña:</label>
+            <input type="password" id="confirmar-contraseña" name="confirmar-contraseña" required>
+            <div class="error-message" id="contraseña-match-error"></div>
+        </div>
+        <div class="form-group">
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" pattern="[0-9]+" required>
+        </div>
+       
+    
+        <div class="form-group">
+            <a href="inicio.html">
+            <input type="submit" value="Comprar">
+        </a>
+        </div>
+    </form>
+</div>
+</section>
+<script>
+    document.getElementById('registro-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        if (validarFormulario()) {
+            alert('¡Compra exitosa!');
+            window.location.href = "inicio.html";
+            
+        }
+    });
+
+    function validarFormulario() {
+        let cedula = document.getElementById('cedula').value.trim();
+        if (!/^\d{0,11}$/.test(cedula)) {
+            document.getElementById('cedula-error').innerText = 'La cédula debe contener solo números y tener máximo 11 caracteres';
+            return false;
+        } else {
+            document.getElementById('cedula-error').innerText = '';
+        }
+
+        let contraseña = document.getElementById('contraseña').value;
+        let confirmarContraseña = document.getElementById('confirmar-contraseña').value;
+        if (contraseña !== confirmarContraseña) {
+            document.getElementById('contraseña-match-error').innerText = 'Las contraseñas no coinciden';
+            return false;
+        } else {
+            document.getElementById('contraseña-match-error').innerText = '';
+        }
+
+        return true;
+    }
+</script>
+
+</body>
+</html>

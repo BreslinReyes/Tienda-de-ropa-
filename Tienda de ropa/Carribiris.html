@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eto</title>
+   
+    <link rel="stylesheet" href="elcarroete.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" 
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="carris.js"></script>
+</head>
+<body>
+
+  <section class="foto">
+    <header>
+      <img class="logo" src="img/logo.jpg" alt="Imagen 1">
+      <nav>
+        <ul>
+          <li><a href="inicio.html">Inicio</a></li>
+          <li><a href="Carribiris.html">Productos</a></li>
+        </ul>
+      </nav>
+        
+         
+       <p class="user"></p>
+       <div class="carris">
+       <a onclick="hacerVisibleCarrito()" class="fas fa-shopping-cart"></a>
+      </div>
+      <div class="main-header__container">
+      </div>
+      <div class="main-header__container">
+  
+      </div>
+      </nav>
+    
+   
+ 
+      </nav>
+      </header>
+      
+      <section class="contenedor">
+    
+        <div class="contenedor-items">
+            <div id="tarjeta1" class="item">
+                <img src="img/95ebbbd0d700204667c122357f82aec0.jpg" alt="" class="img-item">
+                <span class="titulo-item">Polo x100pre</span>
+                <span class="precio-item">$3</span>
+                <i id="tarjet" onclick="agregarAlCarritoClicked(event)"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg></i>
+               
+            </div>
+            <div id="tarjeta2" class="item">
+                <img src="img/b3646264dc236366db94484fc2da780e.jpg"  class="img-item">
+                <span class="titulo-item">Abrigo</span>
+                <span class="precio-item">$10</span>
+                <i id="tarjet" onclick="agregarAlCarritoClicked(event)"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg></i>
+                
+            </div>
+            <div id="procesador1" class="item">
+              
+                <img src="img/1c928bedde6b096e63622641145938d9.jpg" alt="" class="img-item"> 
+                 <span class="titulo-item">T-shirt</span>
+                 <span class="precio-item">$20</span>
+                <i id="tarjet" onclick="agregarAlCarritoClicked(event)"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg></i>
+                
+            </div>
+            <div id="procesador2" class="item">
+               
+                <img height="150" src="img/42708a1f9d566a54e0a6e310edf5a740.jpg" alt="" class="img-item">
+                 <span  class="titulo-item">Poloched</span>
+                 <span class="precio-item">$2</span>
+                <i id="tarjet" onclick="agregarAlCarritoClicked(event)" ><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg></i>
+                
+            </div>
+            <div id="laptop1" class="item">
+                <img height="160" src="img/b3159b6e8242428c4596622dcc7a1891.jpg"  alt="" class="img-item">
+                <span class="titulo-item">Over size</span>
+                <span class="precio-item">$5</span>
+                <i id="tarjet" onclick="agregarAlCarritoClicked(event)" class="product__icon fas fa-cart-plus" style="color:rgb(29, 28, 29)" ></i>
+               
+            </div>
+            <div id="laptop2" class="item">
+                <img  src="img/e14f1a76690d5bbd3ba9c9db5d47f1c4.jpg" alt="" class="img-item">
+                <span class="titulo-item">Abrigo</span>
+                <span class="precio-item">$25</span>
+                <i id="tarjet" onclick="agregarAlCarritoClicked(event)" class="product__icon fas fa-cart-plus" style="color:rgb(17, 16, 17)"></i>
+               
+            </div>
+            <div id="tarjeta4" class="item">
+                <img src="img/d260016c3c831f06ec5c11623140c780.jpg" alt="" class="img-item">
+                <span class="titulo-item">Pantalon</span>
+                <span class="precio-item">$6</span>
+                <i id="tarjet" onclick="agregarAlCarritoClicked(event)" class="product__icon fas fa-cart-plus" style="color:rgb(5, 5, 5)"></i>
+               
+            </div>
+            <div id="procesador3" class="item">
+                
+                <img src="img/5c77b3aa1bbbb0e6ce670f9ea07629e7.jpg" alt="" class="img-item">
+                <span class="titulo-item">Sudadera rosa</span>
+                <span class="precio-item">7</span>
+                <i id="tarjet" onclick="agregarAlCarritoClicked(event)" class="product__icon fas fa-cart-plus" style="color:rgb(3, 3, 3)"></i>
+              
+            </div>
+           
+            
+              
+              
+          <!-- Carrito de Compras -->
+          <div class="carrito" id="carrito">
+            <div class="header-carrito">
+                <h2>Tu Carrito</h2>
+                <span class="basbunny"><i onclick="hacerInVisibleCarrito()" class="fa-solid fa-x"></i></span>
+            </div>
+
+            <div class="carrito-items">
+                
+                
+             
+            </div>
+            <div class="carrito-total">
+                <div class="fila">
+                    <strong>Total</strong>
+                    <span class="carrito-precio-total">
+                        $0
+                    </span>
+                </div>
+                
+                <button  class="btn-pagar">Compra Finalizada</button>
+              
+              </div>
+        </div>
+    </section>  
+       <script src="java.js"></script>
+</body>
+</html>

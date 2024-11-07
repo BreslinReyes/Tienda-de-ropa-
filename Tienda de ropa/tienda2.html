@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+            h1 {
+                text-align: center;
+            }
+            h4 {
+                font-size: 16px;
+                font-weight: 700;
+            }
+            header {
+                padding: 20px 0 0 0;
+                background: white;
+                text-align: center;
+            }
+            @media (min-width: 750px) {
+                header {
+                    text-align: left;
+                }
+            }
+            .borrar-curso {
+                background-color: red;
+                border-radius: 50%;
+                padding: 5px 10px;
+                text-decoration: none;
+                color: white;
+                font-weight: bold;
+            }
+
+            ul {
+                list-style: none;
+            }
+            #hero {
+                background-image:url(img/Nuestros\ productos.jpg);
+                background-repeat: no-repeat;
+                height: 350px;
+                background-size: 100%, cover;
+                
+            }
+            #encabezado {
+                margin: 30px 0;
+            }
+            .submenu {
+                position: relative;
+            }
+
+            .submenu #carrito{
+                display: none;
+            }
+            .submenu:hover #carrito{
+                display: block;
+                position: absolute;
+                right:0;
+
+                top:100%;
+                z-index: 1;
+                background-color: white;
+                padding: 20px;
+                min-height: 400px;
+                min-width: 300px;
+            }
+
+            .contenido-hero {
+                margin-top: 80px;
+                color: rgb(0, 0, 0);
+    
+            }
+            .contenido-hero form {
+                position: relative;
+                margin-bottom: 0;
+            }
+            .contenido-hero form #buscador {
+                height: 50px;
+                margin-bottom: 0;
+            }
+            .contenido-hero form .submit-buscador {
+                position: absolute;
+                right:0;
+                top:0;
+                height: 100%;
+                padding: 0;
+                display: block;
+                text-indent: -9999px;
+                width: 50px;
+                background-image: url(img/hi.png);
+                background-position: right center;
+                background-repeat: no-repeat;
+                border:none;
+            }
+
+            #lista-cursos .row {
+                margin-bottom:20px;
+            }
+            .agregar-carrito {
+                margin:10px 0;
+            }
+
+            .card {
+                text-align: center;
+                border: 1px solid #e1e1e1;
+                background: white;
+    
+            }
+            @media (min-width: 550px) {
+                .card {
+                    text-align: left;
+                }
+            }
+            .info-card  {
+                padding: 10px 20px;
+            }
+
+            .info-card p, 
+            .card h4 {
+                margin-bottom: 5px;
+            }
+            .info-card .precio {
+                text-decoration: line-through;
+                font-size: 18px;
+                margin-top: 10px;
+            }
+            .info-card .precio span {
+                font-weight: 700;
+                font-size: 22px;
+            }
+
+            /* inicio de footer */
+
+            .footer {
+                margin-top: 40px;
+                border-top:1px solid #aaa;;
+                padding-top: 40px;   
+            }
+            .footer .menu a{
+            display: block;
+            margin-bottom: 10px;
+            text-decoration: none;
+            }
+            /* fin */
+
+            .container {
+            position: relative;
+            width: 100%;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box; }
+            .column,
+            .columns {
+            width: 100%;
+            float: left;
+            box-sizing: border-box; }
+
+            /* For devices larger than 400px */
+            @media (min-width: 400px) {
+            .container {
+                width: 85%;
+                padding: 0; }
+            }
+
+            /* For devices larger than 550px */
+            @media (min-width: 550px) {
+            .container {
+                width: 80%; }
+            .column,
+            .columns {
+                margin-left: 4%; }
+            .column:first-child,
+            .columns:first-child {
+                margin-left: 0; }
+
+            .one.column,
+            .one.columns { width: 4.66666666667%; }
+            .two.columns { width: 13.3333333333%; }
+            .three.columns { width: 22%;            }
+            .four.columns { width: 30.6666666667%; }
+            .five.columns { width: 39.3333333333%; }
+            .six.columns { width: 48%;            }
+            .seven.columns { width: 56.6666666667%; }
+            .eight.columns { width: 65.3333333333%; }
+            .nine.columns { width: 74.0%;          }
+            .ten.columns { width: 82.6666666667%; }
+            .eleven.columns { width: 91.3333333333%; }
+            .twelve.columns { width: 100%; margin-left: 0; }
+
+            .one-third.column { width: 30.6666666667%; }
+            .two-thirds.column { width: 65.3333333333%; }
+
+            .one-half.column { width: 48%; }
+
+
+            .offset-by-one.column,
+            .offset-by-one.columns { margin-left: 8.66666666667%; }
+            .offset-by-two.column,
+            .offset-by-two.columns          { margin-left: 17.3333333333%; }
+            .offset-by-three.column,
+            .offset-by-three.columns        { margin-left: 26%;            }
+            .offset-by-four.column,
+            .offset-by-four.columns         { margin-left: 34.6666666667%; }
+            .offset-by-five.column,
+            .offset-by-five.columns         { margin-left: 43.3333333333%; }
+            .offset-by-six.column,
+            .offset-by-six.columns          { margin-left: 52%;            }
+            .offset-by-seven.column,
+            .offset-by-seven.columns        { margin-left: 60.6666666667%; }
+            .offset-by-eight.column,
+            .offset-by-eight.columns { margin-left: 69.3333333333%; }
+            .offset-by-nine.column,
+            .offset-by-nine.columns { margin-left: 78.0%;          }
+            .offset-by-ten.column,
+            .offset-by-ten.columns { margin-left: 86.6666666667%; }
+            .offset-by-eleven.column,
+            .offset-by-eleven.columns { margin-left: 95.3333333333%; }
+
+            .offset-by-one-third.column,
+            .offset-by-one-third.columns { margin-left: 34.6666666667%; }
+            .offset-by-two-thirds.column,
+            .offset-by-two-thirds.columns { margin-left: 69.3333333333%; }
+
+            .offset-by-one-half.column,
+            .offset-by-one-half.columns { margin-left: 52%; }
+
+            }
+
+            html {
+            font-size: 62.5%; }
+            body {
+            font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+            line-height: 1.6;
+            font-weight: 400;
+            font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: #222; }
+
+            /* Botones */
+            a {
+            color: #000000; }
+            a:hover {
+            color: #000000; }
+
+            .button,
+            button,
+            input[type="submit"],
+            input[type="reset"],
+            input[type="button"] {
+            display: inline-block;
+            height: 38px;
+            padding: 0 30px;
+            color: #000000;
+            text-align: center;
+            font-size: 11px;
+            font-weight: 600;
+            line-height: 38px;
+            letter-spacing: .1rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            white-space: nowrap;
+            background-color: transparent;
+            border-radius: 4px;
+            border: 1px solid #bbb;
+            cursor: pointer;
+            box-sizing: border-box; }
+            .button:hover,
+            button:hover,
+            input[type="submit"]:hover,
+            input[type="reset"]:hover,
+            input[type="button"]:hover,
+            .button:focus,
+            button:focus,
+            input[type="submit"]:focus,
+            input[type="reset"]:focus,
+            input[type="button"]:focus {
+            color: #333;
+            border-color: #888;
+            outline: 0; }
+            .button.button-primary,
+            button.button-primary,
+            input[type="submit"].button-primary,
+            input[type="reset"].button-primary,
+            input[type="button"].button-primary {
+            color: #FFF;
+            background-color: #ffffff;
+            border-color: #ffffff; }
+            .button.button-primary:hover,
+            button.button-primary:hover,
+            input[type="submit"].button-primary:hover,
+            input[type="reset"].button-primary:hover,
+            input[type="button"].button-primary:hover,
+            .button.button-primary:focus,
+            button.button-primary:focus,
+            input[type="submit"].button-primary:focus,
+            input[type="reset"].button-primary:focus,
+            input[type="button"].button-primary:focus {
+            color: #000000;
+            background-color: #ffffff;
+            border-color: #feffff; }
+          
+
+            ul {
+            list-style: circle inside; }
+            ol {
+            list-style: decimal inside; }
+            ol, ul {
+            padding-left: 0;
+            margin-top: 0; }
+            ul ul,
+            ul ol,
+            ol ol,
+            ol ul {
+            margin: 1.5rem 0 1.5rem 3rem;
+            font-size: 90%; }
+            li {
+            margin-bottom: 1rem; }
+
+
+            
+            code {
+            padding: .2rem .5rem;
+            margin: 0 .2rem;
+            font-size: 90%;
+            white-space: nowrap;
+            background: #F1F1F1;
+            border: 1px solid #E1E1E1;
+            border-radius: 4px; }
+            pre > code {
+            display: block;
+            padding: 1rem 1.5rem;
+            white-space: pre; }
+
+
+                   th,
+            td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #E1E1E1; }
+            th:first-child,
+            td:first-child {
+            padding-left: 0; }
+            th:last-child,
+            td:last-child {
+            padding-right: 0; }
+
+
+            
+            button,
+            .button {
+            margin-bottom: 1rem; }
+            input,
+            textarea,
+            select,
+            fieldset {
+            margin-bottom: 1.5rem; }
+            pre,
+            blockquote,
+            dl,
+            figure,
+            table,
+            p,
+            ul,
+            ol,
+            form {
+            margin-bottom: 2.5rem; }
+
+
+            /* Utilities
+            –––––––––––––––––––––––––––––––––––––––––––––––––– */
+            .u-full-width {
+            width: 100%;
+            box-sizing: border-box; }
+            .u-max-full-width {
+            max-width: 100%;
+            box-sizing: border-box; }
+            .u-pull-right {
+            float: right; }
+            .u-pull-left {
+            float: left; }
+
+
+            /* Misc
+            –––––––––––––––––––––––––––––––––––––––––––––––––– */
+            hr {
+            margin-top: 3rem;
+            margin-bottom: 3.5rem;
+            border-width: 0;
+            border-top: 1px solid #E1E1E1; }
+
+
+            /* Clearing
+            –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+            /* Self Clearing Goodness */
+            .container:after,
+            .row:after,
+            .u-cf {
+            content: "";
+            display: table;
+            clear: both; }
+
+            /* Larger than mobile */
+            @media (min-width: 400px) {}
+
+            /* Larger than phablet (also point when grid becomes active) */
+            @media (min-width: 550px) {}
+
+            /* Larger than tablet */
+            @media (min-width: 750px) {}
+
+            /* Larger than desktop */
+            @media (min-width: 1000px) {}
+
+            /* Larger than Desktop HD */
+            @media (min-width: 1200px) {}
+            h4{
+            font-size:25px;
+            }
+    </style>
+</head>
+<body>
+    <header id="header" class="header">
+        <div class="container">
+            <div class="row">
+        
+
+                <div class="two columns u-pull-right">
+                        <header>
+                          <nav>
+                            <ul>
+                              <li><a href="inicio.html">Inicio</a></li>
+                              <li><a href="tienda2.html">Productos</a></li>
+                            </ul>
+                          </nav>
+                    <ul>
+                        <li class="submenu">
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg>
+                                <div id="carrito">
+                                        
+                                        <table id="lista-carrito" class="u-full-width">
+                                            <thead>
+                                                <tr>
+                                                    <th>Imagen</th>
+                                                    <th>Nombre</th>
+                                                    <th>Precio</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody></tbody>
+                                        </table>
+    
+                                        <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
+                                        <a href="bre.html" id="pagar-carrito" class="button u-full-width">Pagar</a>
+
+                                </div>
+                        </li>
+                    </ul>
+                </div>
+            </div> 
+        </div>
+        </header>
+    
+    
+        
+        <div id="lista-cursos" class="container">
+            <h1 id="encabezado" class="encabezado"> Nuestros Productos</h1>
+            <div class="row">
+                <div class="four columns">
+                    <div class="card">
+                        <img src="img/95ebbbd0d700204667c122357f82aec0.jpg" class="imagen-curso u-full-width">
+                        <div class="info-card"> 
+                            <p>Polo</p>
+                            <p class="precio">$200  <span class="u-pull-right ">$15</span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="1">Agregar Al Carrito</a>
+                        </div>
+                    </div> 
+                </div>
+                <div class="four columns">
+                        <div class="card">
+                            <img src="img/d260016c3c831f06ec5c11623140c780.jpg" class="imagen-curso u-full-width">
+                            <div class="info-card">
+                                <p>Pantalon</p>
+                                <img src="http://programacion.net/files/article/20160811120805_estrellas.png" width="50">
+                                <p class="precio">$200  <span class="u-pull-right ">$15</span></p>
+                                <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="2">Agregar Al Carrito</a>
+                            </div>
+                        </div>
+                </div>
+                <div class="four columns">
+                        <div class="card">
+                            <img src="img/e14f1a76690d5bbd3ba9c9db5d47f1c4.jpg" class="imagen-curso u-full-width">
+                            <div class="info-card">
+                                <p>Abrigo</p>
+                                <img src="http://programacion.net/files/article/20160811120805_estrellas.png" width="50">
+                                <p class="precio">$200  <span class="u-pull-right ">$15</span></p>
+                                <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="3">Agregar Al Carrito</a>
+                            </div>
+                        </div> 
+                </div>
+    
+            </div> 
+            <div class="row">
+                <div class="four columns">
+                    <div class="card">
+                        <img src="img/1c928bedde6b096e63622641145938d9.jpg" class="imagen-curso u-full-width">
+                        <div class="info-card">
+                            <p>PolochedS</p>
+                            <img src="http://programacion.net/files/article/20160811120805_estrellas.png" width="50">
+                            <p class="precio">$200  <span class="u-pull-right ">$15</span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="4">Agregar Al Carrito</a>
+                        </div>
+                    </div> 
+
+                </div>
+                <div class="four columns">
+                        <div class="card">
+                            <img src="img/5c77b3aa1bbbb0e6ce670f9ea07629e7.jpg" class="imagen-curso u-full-width">
+                            <div class="info-card">
+                                <p>abrigo</p>
+                                <p class="precio">$200  <span class="u-pull-right ">$15</span></p>
+                                <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="5">Agregar Al Carrito</a>
+                            </div>
+                        </div>
+
+                </div>
+                <div class="four columns">
+                        <div class="card">
+                            <img src="img/42708a1f9d566a54e0a6e310edf5a740.jpg" class="imagen-curso u-full-width">
+                            <div class="info-card">
+                                <p>T- shirt</p>
+                                <p class="precio">$200  <span class="u-pull-right ">$15</span></p>
+                                <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="6">Agregar Al Carrito</a>
+                            </div>
+                        </div> 
+                </div>
+            </div> 
+            
+                        </div> 
+                </div>
+        </footer>
+        <script>
+            const carrito = document.getElementById('carrito');
+            const cursos = document.getElementById('lista-cursos');
+            const listaCursos = document.querySelector('#lista-carrito tbody')
+            const vaciarCarritoBtn = document.querySelector('#vaciar-carrito');
+
+            eventslisteners();
+
+            function eventslisteners() 
+            {
+                //atento a cuando se presiona agregar carrito
+                cursos.addEventListener('click', comprarCurso);
+
+                //eliminar curso en el carrito
+                carrito.addEventListener('click', eliminarCurso);
+
+                //vaciar carrit de compras
+                vaciarCarritoBtn.addEventListener('click', vaciarcarrito);
+
+                //mostrar lista de cursos en carrito de compra al cargar DOM-LS
+                document.addEventListener('DOMContentLoaded', leerLS)
+
+            }
+
+            function comprarCurso(e) 
+            {
+                e.preventDefault();
+                //delegation para agregar carrito
+                if (e.target.classList.contains("agregar-carrito")) {
+                    const curso = e.target.parentElement.parentElement;
+                    //enviamos el curso seleccionado para tomar sus datos
+                    leerDatosCurso(curso);
+                }    
+            }
+
+
+            //leer Datos del Curso
+            function leerDatosCurso(curso) {
+                const infoCurso = {
+                    imagen: curso.querySelector('img').src,
+                    
+                    precio: curso.querySelector('.precio span').textContent,
+                    id: curso.querySelector('a').getAttribute('data-id')
+                }
+
+                insertarCurso(infoCurso);
+            }
+
+            // insertar Curso en el carrito
+            function insertarCurso(curso) {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td><img src="${curso.imagen}" width="100"></td>
+                    <td>${curso.titulo}</td>
+                    <td>${curso.precio}</td>
+                    <td><a href="#" class="borrar-curso" data-id="${curso.id}">X</a></td>    
+                `;
+                listaCursos.appendChild(row);
+                guardarCursoLocalStorage(curso);
+
+            }
+
+            //eliminar curso del carrito en el DOM
+            function eliminarCurso(e) 
+            {
+                e.preventDefault();
+
+                let curso, cursoId;
+
+                if (e.target.classList.contains('borrar-curso')) {
+                    e.target.parentElement.parentElement.remove(); 
+                }  
+                curso = e.target.parentElement.parentElement;
+                cursoId = curso.querySelector('a').getAttribute('data-id');   
+                eliminarCursoLS(cursoId);
+            }
+
+            //vacias Carrito
+            function vaciarcarrito() 
+            {
+                //listaCursos.innerHTML = '';
+                while(listaCursos.firstChild){
+                    listaCursos.removeChild(listaCursos.firstChild);
+                }    
+                //vaciar carrito  de LS
+                vaciarLs();
+
+                return false;    
+            }
+
+            //almacenar curso al LS
+            function guardarCursoLocalStorage(curso)
+            {
+                let cursos;
+                cursos = obtenerCursosLocalStorage();
+                //El curso seleccionado se agrega al Array
+                cursos.push(curso);
+                localStorage.setItem('cursos', JSON.stringify(cursos));
+            }
+
+
+            //comprobar que hayan elementos en el LS
+            function obtenerCursosLocalStorage() 
+            {
+                let cursosLS;
+                //comprobamos si no hay naad o es nulo, creamos el array vacío
+                if (localStorage.getItem('cursos') === null) {
+                    cursosLS = [];        
+                } else {
+                    cursosLS = JSON.parse(localStorage.getItem('cursos'));
+                }
+                return cursosLS;
+            }
+
+            //pinta los cursos desde LS en el carrito
+            function leerLS() 
+            {
+                let cursosLS;
+
+                cursosLS = obtenerCursosLocalStorage();
+
+                cursosLS.forEach(function (curso) {
+                    //Construimos el template
+                    const row = document.createElement("tr");
+                    row.innerHTML = `
+                    <td><img src="${curso.imagen}" width="100"></td>
+                    <td>${curso.titulo}</td>
+                    <td>${curso.precio}</td>
+                    <td><a href="#" class="borrar-curso" data-id="${curso.id}">X</a></td>    
+                `;
+                    listaCursos.appendChild(row);
+
+                })
+            }
+
+            //eliminar curso del LS
+            function eliminarCursoLS(curso) 
+            {
+                let cursosLS;
+                //obtnemos el arreglo con los cursos
+                cursosLS = obtenerCursosLocalStorage();
+                //iteramo para buscar coincidencias y eliminar
+                cursosLS.forEach(function(cursoLS, index) {
+                if (cursoLS.id === curso) {
+                    cursosLS.splice(index, 1);
+                }
+                });
+
+                localStorage.setItem('cursos', JSON.stringify(cursosLS));
+
+            }
+
+            //eliminar todos los cursos del LS
+            function vaciarLs() {
+                localStorage.clear();
+            }
+                    </script>
+</body>
+</html>

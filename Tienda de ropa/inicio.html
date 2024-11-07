@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>mipag</title>
+	<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <section class="foto">
+    <header>
+      <img class="logo" src="img/logo.jpg" alt="Imagen 1">
+      <nav>
+        <ul>
+          <li><a href="inicio.html">Inicio</a></li>
+          <li><a href="tienda2.html">Productos</a></li>
+        </ul>
+      </nav>
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="Buscar..." style="display: none;">
+        <button id="search-button"><img class="lupita" src="img/lupi.png" alt="Imagen 1"></button>
+      </div>
+    <script>
+      //Si window.pageYOffset es mayor que sticky, significa que el usuario ha pasado el encabezado.
+        window.onscroll = function() {stickyMenu()};
+
+var header = document.querySelector("header");
+var sticky = header.offsetTop;
+
+function stickyMenu() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+    </script>
+
+    </header>
+    
+    <img src="img/urban.png" class="UrbanLogo" alt="">
+    </div>
+</section>
+<div class="unju">
+</div>
+<div class="contenedor">
+  <div class="caja mision">
+    <h4>Misión</h4>
+    <p>Vestir a nuestros clientes con estilo y comodidad, ofreciendo una amplia variedad de prendas de alta calidad a precios accesibles.</p>
+  </div>
+  <div class="caja vision">
+    <h4>Visión</h4>
+    <p>Convertirnos en un líder en la industria de la moda online, expandiendo nuestro alcance a nuevos mercados y consolidando nuestra posición como empresa innovadora y responsable.</p>
+  </div>
+  <div class="caja valores">
+    <h4>Valores</h4>
+    <ul>
+      <li class="valor">Compromiso con la calidad</li>
+      <li class="valor">Sostenibilidad</li>
+      <li class="valor">Innovación</li>
+    </ul>
+  </div>
+</div>
+<div class="sosten">
+  <div class="boxu" style="background-image: url('img/prduct2.jpg');">
+    <a href="bre.html">
+      <button class="buy-button">Comprar</button>
+    </a>
+      <h1 class="mas comprado"></h1>
+  </div>
+  <div class="boxn" style="background-image: url('img/productpe1.jpg');">
+    <a href="bre.html">
+      <button class="buy-button">Comprar</button>
+    </a>
+  </div>
+</div>
+<div class="carousel-container">
+  <div class="carousel">
+      <img src="img/21b01a1116cb791575a2f890960e6632.jpg" alt="Imagen 1">
+      <img src="img/53a44018b9f6b268496046ff75626ef8.jpg" alt="Imagen 2">
+      <img src="img/562ee354c6c42262d13cb9acaf60f256.jpg" alt="Imagen 3">
+      <img src="img/5bac9537a1cefd314e09c8acb1aea95e.jpg" alt="Imagen 1">
+      <img src="img/892cbeb566e82de8f49858724c2a2234.jpg" alt="Imagen 2">
+      <img src="img/b217c0756f2b4e4d748c6f75c5df6a1d.jpg" alt="Imagen 3">
+      <img src="img/f25f83eb4b4466bfa83537d9ea027f9e.jpg" alt="Imagen 1">
+      <img src="img/11cd0e1524f09cf2d74950d4bfa98f4a.jpg" alt="Imagen 2">
+      <img src="img/4940dda2a3c02474f8210348a2355b8f.jpg" alt="Imagen 3">
+      <img src="img/68899b9c106eb8c8b2b00c66bd3206a6.jpg" alt="Imagen 1">
+      <img src="img/b0b0c6b31fbfeabfdaae5be4399c6b43.jpg" alt="Imagen 2">
+      <img src="img/756e8387028625ec2feeac60277012c7.jpg" alt="Imagen 3">
+      <img src="img/892cbeb566e82de8f49858724c2a2234.jpg" alt="Imagen 1">
+      <img src="img/5bac9537a1cefd314e09c8acb1aea95e.jpg" alt="Imagen 2">
+      <img src="img/b217c0756f2b4e4d748c6f75c5df6a1d.jpg" alt="Imagen 3">
+      <img src="img/b217c0756f2b4e4d748c6f75c5df6a1d.jpg" alt="Imagen 1">
+      <img src="img/11cd0e1524f09cf2d74950d4bfa98f4a.jpg" alt="Imagen 2">
+      <img src="img/756e8387028625ec2feeac60277012c7.jpg" alt="Imagen 3">
+      <img src="img/5bac9537a1cefd314e09c8acb1aea95e.jpg" alt="Imagen 1">
+      <img src="img/f25f83eb4b4466bfa83537d9ea027f9e.jpg" alt="Imagen 2">
+      <img src="img/562ee354c6c42262d13cb9acaf60f256.jpg" alt="Imagen 3">
+  </div>
+</div>
+<script>
+
+//Busca el input de búsqueda con el id search-input y lo almacena en una variable
+document.getElementById("search-button").addEventListener("click", function() {
+  var input = document.getElementById("search-input");
+  if (input.style.display === "none") {
+    input.style.display = "inline-block";
+    input.focus(); 
+  } else {
+   
+    var searchTerm = input.value.trim();
+    if (searchTerm !== "") {
+      alert("Buscando por: " + searchTerm);
+      
+    } else {
+      alert("Por favor, ingresa un término de búsqueda válido.");
+    }
+  }
+});
+
+//carrusel
+document.addEventListener("DOMContentLoaded", function() {
+        const carousel = document.querySelector('.carousel');
+        let currentIndex = 0;
+        const totalItems = carousel.children.length;
+        const interval = 3000; 
+        let isTransitioning = false;
+
+        function nextSlide() {
+            if (!isTransitioning) {
+                isTransitioning = true;
+                currentIndex++;
+                carousel.style.transition = 'transform 0.5s ease';
+                carousel.style.transform = `translateX(-${currentIndex * 100 / totalItems}%)`;
+            }
+        }
+
+        function transitionEndHandler() {
+            isTransitioning = false;
+            if (currentInicio >= totalItems - 1) {
+                carousel.style.transition = 'none';
+                currentInicio = 0;
+                carousel.style.transform = `translateX(0)`;
+            }
+        }
+
+        carousel.addEventListener('transitionend', transitionEndHandler);
+
+        setInterval(nextSlide, interval);
+    });
+
+
+</script>
+</body>
+</html>

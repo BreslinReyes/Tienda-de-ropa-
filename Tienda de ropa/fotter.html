@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer</title>
+   <style>
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-content div {
+  flex-basis: 200px;
+  margin-bottom: 20px;
+}
+
+.footer-content p {
+  margin: 0;
+  color: #fff;
+}
+
+.footer-content ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5px;
+}
+
+.footer-content li {
+  margin-right: 10px;
+}
+
+.footer-content img {
+  height: 30px;
+  margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+  .footer-content div {
+    flex-basis: 100%;
+  }
+}
+   </style>
+
+</head>
+<body>
+
+    <footer>
+        <div class="footer-content">
+          <div class="shipping-info">
+            <p id="shipping-text"></p>
+          </div>
+          <div class="customer-support">
+            <p>ATENCIÓN AL CLIENTE</p>
+            <p>Estamos disponibles 24/7 para resolver cualquier duda.</p>
+          </div>
+          <div class="official-store">
+            <p>100% PRODUCTOS OFICIALES</p>
+            <p>La única marca especializada en merchandising de Bad Bunny</p>
+          </div>
+          <div class="copyright">
+            <p>Copyright © 2023 Bad Bunny Official Store.</p>
+          </div>
+          <div class="categories">
+            <p>CATEGORÍAS</p>
+            <ul>
+              <li>Tienda</li>
+              <li>Gorras</li>
+              <li>Camisetas</li>
+            </ul>
+          </div>
+          <div class="contact-info">
+            <p>+INFO.</p>
+            <ul>
+              <li>Mi cuenta</li>
+              <li>Pedidos</li>
+              <li>Contacto</li>
+              <li>Términos y Condiciones</li>
+              <li>Política de Cookies</li>
+              <li>Aviso legal</li>
+              <li>Política de privacidad</li>
+            </ul>
+          </div>
+      
+        </div>
+      </footer>
+    <script>
+const shippingText = document.getElementById("shipping-text");
+const daysOfWeek = [
+  "domingo",
+  "lunes",
+  "martes",
+  "miércoles",
+  "jueves",
+  "viernes",
+  "sábado",
+];
+
+const currentDay = new Date().getDay();
+const shippingMessage = `ENVÍOS EN ${
+  daysOfWeek[currentDay] === "domingo" ||
+  daysOfWeek[currentDay] === "sábado"
+    ? "5-7 DÍAS HÁBILES"
+    : "2-3 DÍAS HÁBILES"
+}`;
+
+shippingText.innerText = shippingMessage;
+    </script>
+</body>
+</html>
